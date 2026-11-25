@@ -1,0 +1,7 @@
+name: martllm_provider
+title: MartLLM Provider
+description: Adds MartLLM, a marketplace of third-party sellers with an OpenAI-compatible API, as a chat model provider in Agent Zero.
+version: 1.0.0
+settings_sections: []
+per_project_config: false
+per_agent_config: false

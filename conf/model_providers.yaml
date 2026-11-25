@@ -1,0 +1,19 @@
+# MartLLM provider for Agent Zero.
+#
+# Provider id `martllm` maps the key to MARTLLM_API_KEY.
+#
+# litellm_provider is `openai` so model ids keep their maker prefix: Agent Zero
+# builds "<litellm_provider>/<model>" and LiteLLM strips only the first segment,
+# so "deepseek/deepseek-v4-flash" reaches the API unchanged.
+#
+# The model list at /v1/models is public and OpenAI-shaped.
+
+chat:
+  martllm:
+    name: MartLLM
+    litellm_provider: openai
+    models_list:
+      endpoint_url: "https://api.martllm.com/v1/models"
+    kwargs:
+      a0_api_mode: chat
+      api_base: https://api.martllm.com/v1
